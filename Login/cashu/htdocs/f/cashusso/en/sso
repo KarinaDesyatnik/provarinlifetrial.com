@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+<head>
+<title>:: Welcome ::</title>
+<meta name='description' content='Login | Register using your CASHU account.'>
+<meta name='keywords' content='CASHU'>
+<meta name='author' content='CASHU'>
+<meta charset='utf-8'>
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+
+<!-- CSS -->
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/bootstrap.css'>
+<!-- / bootstrap styles -->
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/style.css'>
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/login-v1.css'>
+<!-- / template styles -->
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/style-responsive.css'>
+<!-- / responsive styles -->
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/jquery.bxslider.css'>
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/owl.carousel.css'>
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/owl.theme.css'>
+
+<!-- / bxslider styles -->
+<!-- Icons Fonts -->
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/font-awesome.min.css'>
+<link rel='stylesheet' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/simple-line-icons.css'>
+
+<!-- Fav and touch icons -->
+<link rel='apple-touch-icon-precomposed' sizes='144x144' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/ico/apple-touch-icon-144-precomposed.png' />
+<link rel='apple-touch-icon-precomposed' sizes='114x114' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/ico/apple-touch-icon-114-precomposed.png' />
+<link rel='apple-touch-icon-precomposed' sizes='72x72' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/ico/apple-touch-icon-72-precomposed.png' />
+<link rel='apple-touch-icon-precomposed' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/ico/apple-touch-icon-57-precomposed.png' />
+<link rel='shortcut icon' href='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/stylesheet/en/ico/favicon.ico' />
+<!-- end Fav and touch icons -->
+
+<script>
+
+        var ref = getCookie('CASHURefarrer');
+        var lpRef = getCookie('lpRefarrer');
+        var cash_refer = '';
+
+        var myRefarrer = document.referrer.split( '/' );
+        var myRefarrer = document.referrer;
+
+        var results;
+        if(lpRef && lpRef != ''){
+            lpRef = decodeURIComponent(lpRef);
+            results = lpRef.split('####') ;
+            myRefarrer = results[0];
+        }
+ 
+        if(ref && ref != ''){
+            ref = decodeURIComponent(ref);
+            cash_results = ref.split('####') ;
+            cash_refer = cash_results[0];
+
+        }
+
+        var convertedUrl = getHostName(myRefarrer);
+
+        if(myRefarrer != '' && convertedUrl.search('cashu.') == -1 && convertedUrl.search('.cashu.') == -1 && myRefarrer != cash_refer){
+            deleteCookie('CASHURefarrer');
+            setCookie('CASHURefarrer', myRefarrer, 1);
+        }
+
+        function getHostName(url) {
+            var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+            if (match != null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
+            return match[2];
+            }
+            else {
+                return null;
+            }
+        }
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000*30));
+
+            var expiresDate = d.toUTCString();
+            var expires = 'expires='+ expiresDate;
+
+            var expires2 = d.toJSON(); 
+            expires2 = expires2.replace('T', ' '); 
+            expires2 = expires2.replace('Z', ''); 
+            var Fullexpires = expires2.split('.'); 
+            expires2 = Fullexpires[0];
+
+            var dom = window.location.hostname;
+
+            cvalue = cvalue + '####' + expires2;
+
+            document.cookie = cname +'=' + cvalue + ';expires=' + expires + ';domain=' + dom + ';path=/';
+        }
+
+        function getCookie(cname) {
+            var name = cname + '=';
+            var ca = document.cookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+
+                var c = ca[i];
+                while (c.charAt(0)==' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length,c.length);
+                }
+            }
+            return '';
+        } 
+
+        function deleteCookie(cname) {
+            document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+    </script>
+<script type="text/javascript">
+                                            var _paq = _paq || [];
+                                           _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+                                           _paq.push(["setCookieDomain", "*.cashu.com"]);
+                                           _paq.push(["setCustomVariable", 1, "vpageid", "2573", "visit"]);
+                                           _paq.push(["setCustomVariable", 1, "pageid", "2573", "page"]);
+                                           _paq.push(["setCustomVariable", 5, "sencLu", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 5, "eencLu", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 6, "sencSid", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 6, "eencSid", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 7, "sencLe", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 7 ,"eencLe", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable",8, "sftid", "1sYg2RbsKPZYtAAdAQBe9g==" ,"visit"]);
+                                           _paq.push(["setCustomVariable", 8, "eftid",  "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 9, "srv", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 9, "erv", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 10, "sitio", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 10, "eitio", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 11, "sintp", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 11, "eintp", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 12, "stus", "1sYg2RbsKPZYtAAdAQBe9g==" , "visit"]);
+                                           _paq.push(["setCustomVariable", 12, "etus", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 13, "scmi", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 13, "ecmi", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 14, "strdc", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 14, "etrdc", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 15, "sptxnv", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 15, "eptxnv", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 16, "sptxncu", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 16, "eptxncu", "1sYg2RbsKPZYtAAdAQBe9g==", "page"]);
+                                           _paq.push(["setCustomVariable", 17, "sptxndcres", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 17, "eptxndcres", "1sYg2RbsKPZYtAAdAQBe9g==" , "page"]);
+                                           _paq.push(["setCustomVariable", 18, "sencMerchid", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 18, "eencMerchid", "1sYg2RbsKPZYtAAdAQBe9g==" , "page"]);
+                                           _paq.push(["setCustomVariable", 19, "sencVendid", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+                                           _paq.push(["setCustomVariable", 19, "eencVendid", "1sYg2RbsKPZYtAAdAQBe9g==" , "page"]);
+											_paq.push(["setCustomVariable", 20, "sitid", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+											_paq.push(["setCustomVariable", 20, "eitid", "1sYg2RbsKPZYtAAdAQBe9g==" , "page"]);
+											_paq.push(["setCustomVariable", 21, "scatid", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+											_paq.push(["setCustomVariable", 21, "ecatid", "1sYg2RbsKPZYtAAdAQBe9g==" , "page"]);
+											_paq.push(["setCustomVariable", 22, "ssubcatid", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+											_paq.push(["setCustomVariable", 22, "esubcatid", "1sYg2RbsKPZYtAAdAQBe9g==" , "page"]);
+											_paq.push(["setCustomVariable", 23, "scontid", "1sYg2RbsKPZYtAAdAQBe9g==", "visit"]);
+											_paq.push(["setCustomVariable", 23, "econtid", "1sYg2RbsKPZYtAAdAQBe9g==" , "page"]);										   
+                                           _paq.push(['trackPageView']);
+                                           _paq.push(['enableLinkTracking']);
+                                           (function() {
+                                             var u="https://doppler.analytics.cashu.com/";
+                                             _paq.push(['setTrackerUrl', u+'gypsy.php']);
+                                             _paq.push(['setSiteId', 1]);
+                                            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                                            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'gypsy.js'; s.parentNode.insertBefore(g,s);
+                                          })();
+                                </script>
+
+<link rel='manifest' href='https://www.cashu.com/manifest.json' />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+	{'gtm.start': new Date().getTime(),event:'gtm.js'}
+	);var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5DRZV7');</script>
+	<!-- End Google Tag Manager -->
+	
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5DRZV7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+<!-- End Page Loader --> 
+<div class='page-loader'> <b></b> </div>
+<!-- Page Wrap -->
+<div class='page'> 
+  <div class='toppanel'>  <div class='container'> 
+  <div class='languser'> <a href='#' onClick='document.changeLang.submit();' >عربي</a> </div>  </div> </div>
+  <!-- login Section -->
+  <section class='home-section' id='Home'>
+    <div class='bgxlogin'>
+      
+          <!-- login Page Content -->
+<!--          <div class='pattern-overlay'></div>-->
+          <div class='home-content container'>
+            <div class='home-text'> 
+              <!-- Headings -->
+              <div class='container'>
+              
+               <div class='row'>
+                <div class='col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-md-6 col-sm-6'>
+              <div class='logocashu'>
+              <img width='172' src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/images/en/cashulogow.svg' > </div>
+              </div>
+              </div>
+                <div class='row'>
+                <div class='col-md-3 col-sm-3 hidden-xs hidden-sm ar'>
+<h3 class='one'>
+                                    <span class='two'>SHOP ONLINE</span><br>
+                                    <span> WITH OUR <span style='font-weight: 600;'>PREPAID</span>
+                                    <span class='three'>MAJD CARD</span></span>
+                            </h3>
+</div>
+            
+                  <div class='col-sm-offset-3 col-md-offset-0 col-md-6 col-sm-6 ar'>
+                    <div class='whiteBOX'>
+                      <form class='logins' id='loginForm' name='loginForm' method='POST' action=''>
+                        <div class=' container-fluid'> 
+                          <!----upinput---->
+                          <div class='row'>
+                            <div id='userNameDiv' class='fWrs mp10'>
+<div class='errorpops' style='display: none'></div>
+<label class='fieldLabel'  for='email'> Username/Email </label>
+                              <input  class='' type='email' placeholder=' Username/Email ' required  name='userNickName' id='userNickName' autocomplete='off'>
+                            </div>
+                            <div id='PasswordDiv' class='fWrs mp10'>
+                              <label class='fieldLabel' for='password'>Password</label>
+                              <input type='password' placeholder='Password' value='' required  name='userPassword' id='userPassword' autocomplete='off'>
+                            </div>
+                          </div>
+
+                          <!----recapacha---->
+                          <div class='row'>
+                            <div id='captchaMainDiv' class='fWrs2'>
+                              <div class='col-md-6 col-sm-7 col-xs-6 nopadding2  ' style='padding: 6px' id='captchaDiv'><i onclick='refreshCaptcha()' aria-hidden='true' class='fa fa-refresh refresh'></i></div>
+                              <div class=' col-md-6 col-sm-5  col-xs-6 nopadding '>
+                                    <input  class=' form-control text-recaptcha' type='text' id='turningImage'  name='turningImage' autocomplete='off' required placeholder='Enter displayed code' >
+                              </div>
+                            </div>
+                          </div>
+
+                            <input type='hidden' id='actionURL' value='https://www.cashu.com/cashusso/en/sso_next' />
+                            <input type='hidden' id='sid' name='sid' value='e4e4c33986034f01563e35e73acd1da4' />
+                            <input type='hidden' id='signature' name='signature' value='4b2d83d19ee4e84fd679b5f90efbf0bc' />
+                            <input type='hidden' id='loginReturnUrl' name='loginReturnUrl' value='https://www.cashu.com/CLogin/login?lang=en' />
+                            <input type='hidden' id='sessionID' name='sessionID' value='' />
+                            <input type='hidden' id='referrer' name='referrer' value='Clogin' />
+                            <input type='hidden' id='responseType' name='responseType' value='post' />
+                          
+                          <!----btnlogin---->
+                          <div class='row'>
+                            <div class='fWrs mp30 mt30'>
+                              <button value='Log In' name='btnLogin' id='btnLogin' class='  btn btnlogins btn-primary   btn-cashu btn-full' type='button' onClick='checkData();' >Log In</button>
+                            </div>
+                          </div>
+                          <div class='row'>
+                            <div class='forgotLink'><a href='https://www.cashu.com/CLogin/forgetPassword?lang=en' target='_blank'> Forgot Password? </a></div>
+                          </div>
+                          <div class='row'> 
+                          
+                          <span class='newcashu'>New To CASHU ?</span>
+                          <a id='createAccount' class='button secondary'  href='https://www.cashu.com/CLogin/registersForm?lang=en' target='_blank'>Sign Up</a> </div>
+                        </div>
+                        
+                        
+                        
+                      </form>
+                    </div>
+                    
+                    <div class='footer-box'>
+                    
+                    <ul>
+                    <li>  <a href='https://www.cashu.com/site/en/TermsOfUse/ConsumerTermsandconditions' target='_blank'>Terms and Conditions</a> </li>
+                    
+                    <li>  <a href='https://www.cashu.com/site/en/supportpage' target='_blank'>Help </a> </li>
+                    
+                    <li class='cops'>  <span>� 2002 - 2019</span>  </li>
+                    </ul>
+                    
+                    </div>
+                    
+                    
+                  </div>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End login Page Content --> 
+         
+    </div>
+  </section>
+  <!-- End login Section --> 
+  
+</div>
+<!-- End Page Wrap --> 
+<form id='changeLang' name='changeLang' method='POST' action='https://www.cashu.com/cashusso/ar/sso'>
+	<input type='hidden' id='signature' name='signature' value='4b2d83d19ee4e84fd679b5f90efbf0bc' />
+	<input type='hidden' id='loginReturnUrl' name='loginReturnUrl' value='https://www.cashu.com/CLogin/login?lang=en' />
+	<input type='hidden' id='sessionID' name='sessionID' value='' />
+	<input type='hidden' id='referrer' name='referrer' value='Clogin' />
+	<input type='hidden' id='responseType' name='responseType' value='post' />
+</form>
+<!-- JS --> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery-1.9.1.min.js'></script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.min.js'></script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery-migrate-1.2.1.min.js'></script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.easing.1.3.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/bootstrap.min.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.smooth-scroll.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.scrollTo.min.js'></script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.localScroll.min.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.viewport.mini.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.countTo.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.appear.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.ba-hashchange.min.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.fittext.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.sticky.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.parallax-1.1.3.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.fitvids.js'> </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.bxslider.min.js'>  </script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/jquery.mixitup.min.js'> </script> 
+<script defer src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/owl.carousel.js'></script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/classie.js'></script> 
+<script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/all.js'> </script>  
+<script>
+	var alerts = {"error6":"Invalid Username/Email","error25":"Invalid Entry, Password is too short","error20":"Sorry; you have 3 wrong attempts to verify your mobile number, please check the code you have recieved and try again later","error18":"Your cashU account\n\thas been suspended because you have not used it since long time, please contact\n\t<a href='mailto:support@cashu.com'>support@cashu.com</a> in order to have your account reactivated","error26":"Invalid Entry, Password is too long","error1":"Required field cannot be left blank","error13":"The characters you entered didn't match the Turning Number. Please try again.","error5":"Invalid Password","error8":"Your session has expired, please login again","error14":"Incorrect entry, password is too short","error29":"Sorry, Since you have entered the answer of the security question Three times wrongly we stopped the forget password process.","error19":"Sorry, only letters (Aa-Zz), numbers (0-9), dash (-) , underscore (_), (@), and full stop (.) are allowed ","error21":"The characters you entered didn't match the Turning Number. Please try again.","error12":"Your CASHU account has been suspended please contact <a href=mailto:support@cashu.com>support@cashu.com</a>","error9":"This is your first login, Please log in your <a href=https://www.cashu.com/CLogin/login?lang=en target=_blank>CASHU account</a> to complete your profile","error10":"Your CASHU account information is incomplete! Please log in your CASHU account at CASHU.com and complete your profile before using the form below. <a href=https://www.cashu.com/CLogin/login?lang=en target=_blank>Take me to my CASHU account page now!</a>","error28":"Please Activate your CASHU Account , check your email","error24":"Your account has been Locked click <a href=\"javascript:linkLang('forgetPassword')\">here </a>to reset your account password.","error2360225":"Enter the required field.","error2590201":"System Error. Please try again later","error4":"Sorry, only letters (Aa-Zz), numbers (0-9), dash (-) , underscore (_), (@), and full stop (.) are allowed","error22":"Invalid input.","error27":"System Error. Please try again later.","error7":"Your Password has expired, Please log in your <a href=https://www.cashu.com/CLogin/login?lang=en target=_blank>CASHU account</a> to reset your password","error16":"Your account has been chosen successfully ,please login again.","error17":"Your cashU account has been suspended please contact <a href='mailto:support@cashu.com'>support@cashu.com</a>","error23":" We are sorry to inform you that you are not allowed to login and use your account from this country.<BR>For any assistance please contact our customer <a href='mailto:support@cashu.com'>support</a>","error15":"Incorrect entry, password is too long","error2360228":"Incorrect entry. Please enter the new numbers.","error2":"Minimum of 3 characters in length","error2590209":"This account is already verified","error11":"Signature failed","error3":"Please check \"I'm a human\" checkbox","error2540203":"The verification link not valid"} ;
+	var generateCaptchaURL = 'https://www.cashu.com/cashusso/en/sso/generateCaptcha';
+</script>
+
+<script type='text/javascript' src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/cashu_sso.js'></script> 
+<!--[if lt IE 10]>
+          <script src='https://dcgm5h9fsaito.cloudfront.net/images/cashusso/javascript/placeholder.js'></script> 
+      <![endif]-->
+
+</body>
+</html>
