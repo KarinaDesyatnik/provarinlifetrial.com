@@ -1137,6 +1137,7 @@ h2.ifYou {
     color: #000 !important;
     display: block;
     padding: 20px 40px;
+    text-transform: uppercase;
 }
 
 
@@ -1439,6 +1440,7 @@ h2.ifYou {
     padding: 20px 40px;
     line-height: 1.5;
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .btn-callout {
@@ -3259,7 +3261,9 @@ span.mobileShow {
         font-size: 14px;
     }
     .section-title {
-        font-size: 17px !important;
+        font-size: 14px !important;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 }
 
@@ -3476,15 +3480,16 @@ input:focus {
     }
     .safety-page .safety .safety-title,
     .safety .safety-title {
-        font-size: 18px;
+        font-size: 14px;
         line-height: 1.5em;
-        margin-bottom: 20px;
-        margin-top: 30px;
+        margin-bottom: 10px;
+        margin-top: 20px;
         text-transform: uppercase;
+        font-weight: 400;
     }
     .safety-page .safety .main-text,
     .safety .main-text {
-        font-size: 14px;
+        font-size: 12px;
         text-align: justify;
     }
     .sidebar-title .sm-text {
